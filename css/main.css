@@ -1,0 +1,20 @@
+body {
+  font: normal 100% Arial, Sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.875em;
+  color: #686868;
+  line-height: 1.2;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper1 {
+  display: table;
+  width: 100%;
+}

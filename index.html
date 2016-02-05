@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/jquery.tmpl.min.js"></script>
+
+	<script>
+	$(function () {
+		var data = [
+			{ time: "18:30", date: "4/10/13", blog_icon: "icon-trophy", title: "ICT 2013 20th International Conference", blog_img: "1", content: "icebean black-eyed pea maize scallion green bean spinach cabbage jicama bell pepper carrot onion corn plantain garbanzo. Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Parsley amaranth tigernut silver beet maize fennel spinach. Ricebean black-eyed pea maize scallion green bean spinach cabbage jicama bell pepper carrot onion corn plantain garbanzo."},
+			{ time: "12:04", date: "4/10/13", blog_icon: "icon-video", title: "Management Meeting", blog_img: "2", content: "Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.."},
+			{ time: "05:36", date: "4/10/13", blog_icon: "icon-comments", title: "New Project Launch", blog_img: "3", content: "Ricebean black-eyed pea maize scallion green bean spinach cabbage jicama bell pepper carrot onion corn plantain garbanzo. Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Parsley amaranth tigernut silver beet maize fennel spinach. Ricebean black-eyed pea maize scallion green bean spinach cabbage jicama bell pepper carrot onion corn plantain garbanzo."},
+			{ time: "13:15", date: "4/10/13", blog_icon: "icon-music", title: "Promotion Day", blog_img: "4", content: "Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi. coriander bitterleaf epazote radicchio shallot winter purslane collard. oriander bitterleaf epazote radicchio shallot winter purslane collard. Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.Coriander bitterleaf epazote radicchio shallot winter purslane collard. Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.aulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic "},
+			{ time: "21:30", date: "4/10/13", blog_icon: "icon-rss", title: "Daily Feeds", blog_img: "5", content: "Parsley amaranth tigernut silver beet maize fennel spinach. Ricebean black-eyed pea maize scallion green bean spinach cabbage jicama bell pepper carrot onion corn plantain garbanzo. Sierra leone bologi komatsuna celery peanut swiss chard silver beet squash dandelion maize chicory burdock tatsoi dulse radish wakame beetroot."},
+			{ time: "12:11", date: "4/10/13", blog_icon: "icon-times", title: "Staff Meeting", blog_img: "0", content: "Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi."},
+			{ time: "09:56", date: "4/10/13", blog_icon: "icon-bar-chat", title: "Demo Europe 2013", blog_img: "6", content: "arsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. Lotus root burdock bell pepper chickweed shallot groundnut pea sprouts welsh onion wattle seed pea salsify turnip scallion peanut arugula bamboo shoot onion swiss chard."},
+		];
+
+		$('#blog').tmpl(data).appendTo('#row1');
+
+	});
+	</script>
+	<script id="blog" type="text/x-jquery-tmpl">
+	
+		
+	
+	{{if blog_img == 0 }}
+			<div class="col-lg-12 blog">
+				<div class="row">
+						<div  class="content-blog pos ${blog_icon}">
+							<h3>${title}</h3>
+							<hr>
+							<p class="content-text">${content}</p>
+						</div>
+						<div class="pos blog-icon">
+							<img src="img/${blog_icon}.png"/>
+						</div>
+						<div class="pos ">
+							<span class="date">${date}</span>
+							<span class="${blog_icon}-color">${time}</span>
+						</div>
+				</div>
+			</div>
+		{{else blog_img > 0}}
+			<div class="col-lg-12 blog">
+				<div class="row">
+						<div  class="content-blog pos ${blog_icon}">
+							<h3>${title}</h3>
+							<hr>
+							<img src="img/${blog_img}.png"/>
+							<p class="content-text">${content}</p>
+						</div>
+						<div class="pos blog-icon">
+							<img src="img/${blog_icon}.png"/>
+						</div>
+						<div class="pos ">
+							<span class="date">${date}</span>
+							<span class="${blog_icon}-color">${time}</span>
+						</div>
+				</div>
+			</div>
+		{{/if}}
+	</script>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+	<div class="row">
+		<div class="col-lg-1">
+			<strong class="site-logo">metro<span>nic</span></strong>
+		</div>	
+		<div class="col-lg-2 col-lg-offset-9">
+			<ul class="user-menu">
+				<li class="warning"></li>
+				<li class="massage"></li>
+				<li class="board"></li>
+				<li>Bob Nilson</li>
+			</ul>
+		</div>
+	</div>
+	</header>
+		<div class="wrapper1">
+		<div id="sweeties" class="site-bar">
+				<input name="search" placeholder="Search...">
+				<ul class="menu">
+					<li class="Dashboard"><a href=""> Dashboard</a></li>
+					<li class="Layouts"><a href="">Layouts</a></li>
+					<li class="Frontend"><a href="">Frontend Theme</a></li>
+					<li class="UI"><a href="">UI Featurse</a></li>
+					<li class="Form"><a href="">Form Stuff</a></li>
+					<li id="abc" class="Pages main"><a href="#">Pages</a></li>
+						<ul id="a" class="sub-menu" >
+							<li class="portfolio">Portfolio</li>
+							<li class="timeline">TimeLine</li>
+							<li class="comingsoon">Cpming Soon</li>
+							<li class="blog1">Blog</li>
+							<li class="blogpost">Blog Post</li>
+							<li class="news">News</li>
+							<li class="newsview">News View</li>
+							<li class="aboutus">About Us</li>
+							<li class="contactus">Contact us</li>
+							<li class="calendar">Calendar</li>
+						</ul>		
+					
+					<li class="Extra"><a href="">Extra</a></li>
+					<li class="lvl3"><a href="">3 Level Menu</a></li>
+					<li class="lvl4"><a href="">4 Level Menu</a></li>
+					<li class="Login"><a href="">Login Option</a></li>
+					<li class="Data"><a href="">Data Tables</a></li>
+					<li class="Portlets"><a href="">Portlets</a></li>
+					<li class="Maps"><a href="">Maps</a></li>
+					<li class="Visual"><a href="">Visual Charts</a></li>
+				</ul>
+		</div>	
+		<div class="blog-content">
+			<h1>Timeline <span class="secondpth-title"> coming soon page with date countdown</span></h1>
+			
+				<div class="col-lg-12">
+					<ul class="nav">
+						<li ><a class="home" href=""> Home</a></li>
+						<li><a href="">Pages</a></li>
+						<li><a href="">Timeline</a></li>
+						<li class="action"><a href="">Actions</a></li>
+					</ul>
+				</div>
+				<div id="row1"></div>
+			
+			
+		</div>
+		</div>
+	<footer>
+		<span>2013 &#169; Metronic by Keenthemes</span>
+	</footer>
+</div>
+<script src="js/js.js"></script>
+</body>
+</html>

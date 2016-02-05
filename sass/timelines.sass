@@ -1,0 +1,155 @@
+.blog-content
+	display: table-cell
+	h1
+		margin: 10px 0 0 10px
+
+.secondpth-title
+	font-size: 0.55em	
+	color: #888888
+
+
+.nav
+	max-height: 40px
+	margin-top: 20px
+	background: #eeeeee
+	margin-right: 15px
+	a
+		font-size: 0.9em
+		color: #444444	
+	li 
+		padding: 10px 15px
+		float: left
+	.home
+		padding-left: 20px
+	.home:before	
+		+sprite-p
+		background-position: 1px -519px
+		height: 20px
+	li:not(:last-of-type) 
+		padding-right: 10px	
+	a:not(.action):after
+		content: ""
+		background: url(../img/nav-icon.png) no-repeat	
+		background-position: -3px -23px
+		padding-left: 10px
+		margin-left: 10px
+	.action 
+		background: #4d90fe
+		float: right
+		a
+			color: #fff
+	.action a:after
+		content: ""
+		background: url(../img/nav-icon.png) no-repeat	
+		background-position: -5px -122px
+		padding-left: 10px
+		margin-left: 10px
+
+.pos
+	float: right	
+	margin: 0 6% 0 0
+	color: #fff
+	hr
+		margin: 5px
+
+	img
+		float: left
+
+	span
+		display: block
+		font-size: 2em
+		font-family: "OpenSans"
+	.date
+		float: right
+		color: #aaaaaa
+		font-size: 0.75em	
+	p
+		text-align: left
+		margin-left: 20px	
+		font-size: 0.875em
+		font-family: "Myriad Pro"
+		line-height: 1.429
+
+.blog
+	position: relative
+	margin-top: 20px
+	float: right
+	.content-blog
+		margin-right: 30px
+		width: 60%
+		padding: 5px
+		.content-text
+			margin-left: 5px
+		img
+			margin-right: 10px
+
+
+.blog-icon
+	padding: 5px
+	background: #aaaaaa	
+	border: 5px solid #cccccc
+	-moz-border-radius: 23px /* Firefox */
+	-webkit-border-radius: 23px /* Safari, Chrome */
+	border-radius: 23px /* CSS3 */
+	
+
+.blog-icon:after
+	content: ""
+	position: absolute
+	margin-top: 30px
+	margin-left: -16px
+	width: 7px
+	height: 100%
+	background: #cccccc 
+
+.blog:last-child .blog-icon:after
+	content: none
+	width: 0
+	height: 0
+
+.blog:last-of-type
+	margin-bottom: 20px
+
+
+.icon-trophy
+	background: #ffb848
+	
+.icon-video
+	background: #4b8df8
+	
+.icon-comments
+	background: #35aa47
+	
+.icon-music
+	background: #852b99
+
+.icon-rss
+	background: #e02222
+	
+.icon-times
+	background: #555555
+	
+.icon-bar-chat
+	background: #4b8df8
+	
+.icon-trophy-color
+	color: #ffb848
+
+.icon-video-color
+	color: #4b8df8
+
+.icon-comments-color
+	color: #35aa47
+
+.icon-music-color
+	color: #852b99
+
+.icon-rss-color
+	color: #e02222
+
+.icon-times-color
+	color: #555555
+
+.icon-bar-chat-color
+	color: #4b8df8
+

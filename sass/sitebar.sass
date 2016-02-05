@@ -1,0 +1,147 @@
+.site-bar
+	width: 12%
+	background: #3d3d3d
+	font-family: "OpenSans"
+	display: table-cell
+
+	input
+		width: 80%
+		margin-left: 10px
+		margin-top: 20px
+		background: #3d3d3d
+		border: none
+		border-bottom: 1px solid #7d7d7d
+		background: url(../img/search-icon.png) no-repeat 
+		background-position: right -1px
+		color: #747474
+
+	ul
+		margin-top: 20px
+		font-size: 1em
+		line-height: 2.2em	
+	.menu
+		.main:hover
+			background: #303030
+		.sub-menu
+			background:	#3d3d3d
+			
+		li:after
+			content: ""
+			background: url(../img/nav-icon.png) no-repeat center
+			float: right
+			width: 20px
+			height: 40px
+			background-position: 1px 15px
+
+		.after:after
+			content: ""
+			background: url(../img/nav-icon.png) no-repeat center
+			float: right
+			width: 20px
+			height: 40px
+			background-position: 1px -37px
+				
+		a
+			color: #fff				
+		.sub-menu
+			li:after
+				content: ""
+				background: none				
+	.Dashboard:before
+		+sprite-p
+		background-position: 1px -31px
+	.Layouts:before
+		+sprite-p
+		background-position: 1px -64px
+	.Frontend:before
+		+sprite-p
+		background-position: 1px -101px
+	.UI:before
+		+sprite-p
+		background-position: 1px -132px
+	.Form:before
+		+sprite-p
+		background-position: 1px -167px
+	.Pages:before
+		+sprite-p
+		background-position: 1px -203px
+	.Extra:before
+		+sprite-p
+		background-position: 1px -236px
+	.lvl3:before
+		+sprite-p
+		background-position: 1px -267px
+	.lvl4:before
+		+sprite-p
+		background-position: 1px -302px
+	.Login:before
+		+sprite-p
+		background-position: 1px -368px
+	.Data:before
+		+sprite-p
+		background-position: 1px -335px
+	.Portlets:before
+		+sprite-p
+		background-position: 1px -401px
+	.Maps:before
+		+sprite-p
+		background-position: 1px -435px
+	.Visual:before
+		+sprite-p
+		background-position: 1px -468px
+	.menu 
+		li
+			padding-left: 10px
+			min-height: 40px
+			border-top: 1px solid #5c5c5c
+			border-bottom:	1px solid #5c5c5c
+								
+	li:last-of-type
+		border-bottom: none
+	li:first-of-type
+		border-top: none
+
+		li
+			border-bottom: none
+			border-top: none
+			padding-left: 30px
+			color: #8a8a8a
+	.portfolio:before
+		+sprite-p-open
+		background-position: 1px 1px	
+	.timeline:before
+		+sprite-p-open	
+		background-position: 1px -44px
+	.comingsoon:before
+		+sprite-p-open
+		background-position: 1px -89px
+	.blog1:before
+		+sprite-p-open
+		background-position: 1px -137px
+	.blogpost:before
+		+sprite-p-open
+		background-position: 1px -181px
+	.news:before
+		+sprite-p-open
+		background-position: 1px -225px
+	.newsview:before
+		+sprite-p-open
+		background-position: 1px -270px
+	.aboutus:before
+		+sprite-p-open
+		background-position: 1px -316px
+	.contactus:before
+		+sprite-p-open
+		background-position: 1px -355px
+	.calendar:before
+		+sprite-p-open
+		background-position: 2px -401px
+	.sub-menu
+		display: none	
+		li
+			border-bottom: none
+			border-top: none
+			margin-left: 20px
+			color: #dddddd	
+
+		
